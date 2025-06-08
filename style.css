@@ -1,0 +1,46 @@
+/* オセロ盤のスタイル */
+#board {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(8, 50px); /* 8列、各列の幅は50px */
+    grid-template-rows: repeat(8, 50px);    /* 8行、各行の高さは50px */
+    width: 400px; /* 8 * 50px = 400px */
+    height: 400px; /* 8 * 50px = 400px */
+    border: 2px solid #333; /* 盤の境界線 */
+    margin: 20px auto; /* 中央寄せと上下のマージン */
+    background-color: #050; /* オセロ盤の背景色 */
+}
+
+/* 各マスのスタイル */
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #666; /* マス間の境界線 */
+    display: flex;
+    justify-content: center; /* 石を中央に配置 */
+    align-items: center;     /* 石を中央に配置 */
+    cursor: pointer; /* マウスオーバー時にポインターを表示 */
+}
+
+/* 石の共通スタイル */
+.stone {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 円形にする */
+}
+
+/* 黒石のスタイル */
+.black {
+    background-color: rgb(0, 0, 0);
+}
+
+/* 白石のスタイル */
+.white {
+    background-color: rgb(255, 255, 255);
+}
+
+/* メッセージ表示エリアのスタイル */
+#message {
+    text-align: center; /* テキストを中央寄せ */
+    font-size: 1.5em; /* フォントサイズ */
+    margin-top: 10px; /* 上部のマージン */
+}
